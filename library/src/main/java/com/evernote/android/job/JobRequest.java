@@ -109,11 +109,11 @@ public final class JobRequest {
     private static final JobCat CAT = new JobCat("JobRequest");
 
     /*package*/ static long getMinInterval() {
-        return JobConfig.isAllowSmallerIntervalsForMarshmallow() ? TimeUnit.MINUTES.toMillis(1) : MIN_INTERVAL;
+        return JobConfig.isAllowSmallerIntervalsForMarshmallow() ? TimeUnit.SECONDS.toMillis(30) : MIN_INTERVAL;
     }
 
     /*package*/ static long getMinFlex() {
-        return JobConfig.isAllowSmallerIntervalsForMarshmallow() ? TimeUnit.SECONDS.toMillis(30) : MIN_FLEX;
+        return JobConfig.isAllowSmallerIntervalsForMarshmallow() ? TimeUnit.SECONDS.toMillis(10) : MIN_FLEX;
     }
 
     /*package*/ static final long START_NOW = 1;
