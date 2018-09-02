@@ -133,7 +133,7 @@ public final class JobConfig {
      * are allowed. The default value is {@code false}.
      */
     public static boolean isAllowSmallerIntervalsForMarshmallow() {
-        return allowSmallerIntervals && Build.VERSION.SDK_INT < Build.VERSION_CODES.N;
+        return allowSmallerIntervals;
     }
 
     /**
